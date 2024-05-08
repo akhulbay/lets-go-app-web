@@ -1,0 +1,23 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.app {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+.body {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 0 auto;
+
+}
+
+.header {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}

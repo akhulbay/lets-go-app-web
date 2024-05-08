@@ -1,0 +1,22 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar-item h2 {
+    text-align: center;
+}
