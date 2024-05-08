@@ -15,8 +15,8 @@ function LoginPage({setIsAuth}) {
 
         AuthService.login(username, password).then(
             () => {
+                navigation("/users");
                 setIsAuth(true);
-                navigation("/");
             },
             error => {
                 alert(error)

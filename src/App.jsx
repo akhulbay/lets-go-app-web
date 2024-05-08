@@ -5,6 +5,7 @@ import LoginPage from "./components/Login/login.jsx";
 import Sidebar from "./components/SideBar/side-bar.jsx";
 import {MyContext} from "./context";
 import Users from "./components/Users/users.jsx";
+import Events from "./components/Events/events.jsx";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
                             <Routes>
                                 <Route path="/login" element={<LoginPage setIsAuth={setIsAuth}/>}/>
                                 <Route path="/users" element={<Users/>}/>
-                                <Route path="/events" element={<Users/>}/>
+                                <Route path="/events" element={<Events/>}/>
                             </Routes>
                         </div>
                     </div>

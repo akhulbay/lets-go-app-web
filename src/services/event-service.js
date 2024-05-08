@@ -20,14 +20,14 @@ class EventService {
         });
     }
 
-    loadWithPagination(page, count) {
+    loadWithPagination(page, size) {
         let config = {
             headers: {
                 "Authorization": authHeader()
             }
         }
 
-        let urlWithParams = `${API_EVENTS_URL}?page=${page}&count=${count}`;
+        let urlWithParams = `${API_EVENTS_URL}?page=${page}&size=${size}`;
 
         return axios.get(urlWithParams, config).then((response) => {
             return response.data;
