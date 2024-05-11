@@ -3,6 +3,7 @@ import UserService from "../../services/user-service.js";
 import "./users.scss"
 import AuthService from "../../services/auth-service.js";
 import {useNavigate} from "react-router-dom";
+import {Button} from "@mui/material";
 
 function Users() {
 
@@ -32,7 +33,9 @@ function Users() {
                 <div className="table-data">{user.name}</div>
                 <div className="table-data">{user.email}</div>
                 <div className="table-data">{user.role}</div>
-                <div className="table-data">5</div>
+                <div className="table-data">
+                    <Button variant="contained">Block</Button>
+                </div>
             </div>
         )
     })
