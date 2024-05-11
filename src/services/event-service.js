@@ -20,7 +20,7 @@ class EventService {
         });
     }
 
-    loadWithPagination(page, size) {
+    async loadWithPagination(page, size) {
         let config = {
             headers: {
                 "Authorization": authHeader()
@@ -40,7 +40,7 @@ class EventService {
         axios.post(API_EVENTS_URL, user)
     }
 
-    update(user) {
+    async update(user) {
         axios.put(API_EVENTS_URL, user)
     }
 

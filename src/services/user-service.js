@@ -6,7 +6,7 @@ const API_USERS_URL = `${serverUrl}/users`;
 
 class UserService {
 
-    load() {
+    async load() {
         let config = {
             headers: {
                 "Authorization": authHeader()
@@ -20,7 +20,7 @@ class UserService {
         });
     }
 
-    loadWithPagination(page, size) {
+    async loadWithPagination(page, size) {
         let config = {
             headers: {
                 "Authorization": authHeader()
@@ -36,12 +36,36 @@ class UserService {
         });
     }
 
-    create(user) {
+    async loadRoles() {
+        let config = {
+            headers: {
+                "Authorization": authHeader()
+            }
+        };
+
+        let url = API_USERS_URL + "/roles"
+
+        return axios.get(url, config).then((response) => {
+            return response.data;
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+
+    async create(user) {
         axios.post(API_USERS_URL, user)
     }
 
-    update(user) {
-        axios.put(API_USERS_URL, user)
+    async update(user, userId) {
+        let url = `${API_USERS_URL}/${userId}`;
+
+        let config = {
+            headers: {
+                "Authorization": authHeader()
+            }
+        }
+
+        axios.put(url, user, config).then(r => r.data);
     }
 
 }

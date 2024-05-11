@@ -15,7 +15,7 @@ function Events() {
     const [events, setEvents] = useState([]);
 
     function parseDateFromArray(dateArray) {
-        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2], dateArray[3], dateArray[4], dateArray[5], dateArray[6] / 1000).toString();
+        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2], dateArray[3], dateArray[4], dateArray[5], dateArray[6] / 1000).toDateString();
     }
 
 
