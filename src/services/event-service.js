@@ -40,8 +40,34 @@ class EventService {
         axios.post(API_EVENTS_URL, user)
     }
 
-    async update(user) {
-        axios.put(API_EVENTS_URL, user)
+    async delete(eventId) {
+        let config = {
+            headers: {
+                "Authorization": authHeader()
+            }
+        }
+
+        let url = `${API_EVENTS_URL}/${eventId}`;
+
+        axios.delete(url, config);
+    }
+
+    async update(eventToUpdate, eventId) {
+        let formData = new FormData();
+
+        // Оборачиваем объект eventToUpdate в Blob для отправки, так как сервер ожидает получить его в виде отдельной части
+        formData.append("eventToUpdate", new Blob([JSON.stringify(eventToUpdate)], { type: "application/json" }));
+
+        let config = {
+            headers: {
+                "Authorization": authHeader(),
+                "Content-Type": "multipart/form-data"  // Указываем тип содержимого
+            }
+        }
+
+        let url = `${API_EVENTS_URL}/${eventId}`;
+
+        axios.put(url, formData, config);
     }
 
 }
