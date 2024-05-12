@@ -53,7 +53,13 @@ class UserService {
     }
 
     async create(user) {
-        axios.post(API_USERS_URL, user)
+        let config = {
+            headers: {
+                "Authorization": authHeader()
+            }
+        }
+
+        axios.post(API_USERS_URL, user, config)
     }
 
     async update(user, userId) {

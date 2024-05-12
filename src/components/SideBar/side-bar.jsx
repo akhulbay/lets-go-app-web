@@ -20,8 +20,14 @@ function Sidebar() {
             <NavLink to="/users">
                 <div className="sidebar-item">Users</div>
             </NavLink>
+            <NavLink to="/create-user">
+                <div className="sidebar-item">Create User</div>
+            </NavLink>
             <NavLink to="/events">
                 <div className="sidebar-item">Events</div>
+            </NavLink>
+            <NavLink to="/create-event">
+                <div className="sidebar-item">Create Event</div>
             </NavLink>
             <div className="sidebar-item" onClick={() => handleNavigate()}>Sign out</div>
         </div>

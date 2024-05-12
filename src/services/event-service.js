@@ -36,8 +36,20 @@ class EventService {
         });
     }
 
-    create(user) {
-        axios.post(API_EVENTS_URL, user)
+    async create(event, banner) {
+        let formData = new FormData();
+
+        formData.append("eventToCreate", new Blob([JSON.stringify(event)], { type: "application/json" }));
+        formData.append("banner", banner);
+
+        let config = {
+            headers: {
+                "Authorization": authHeader(),
+                "Content-Type": "multipart/form-data"
+            }
+        }
+
+        axios.post(API_EVENTS_URL, formData, config)
     }
 
     async delete(eventId) {

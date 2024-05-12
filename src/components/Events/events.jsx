@@ -27,8 +27,8 @@ function Events() {
     const [longitude, setLongitude] = useState(0.0);
     const [latitude, setLatitude] = useState(0.0);
 
-    function handleDeleteButton(eventId) {
-        EventService.delete(eventId);
+    async function handleDeleteButton(eventId) {
+        await EventService.delete(eventId);
 
         fetchEventsData();
     }
@@ -87,8 +87,12 @@ function Events() {
                 <div className="table-data">{event.description}</div>
                 <div className="table-data">{parseDateFromArray(event.dateTime).toDateString()}</div>
                 <div className="table-data">
-                    <Button variant="contained" onClick={() => handleDeleteButton(event.id)}>Delete</Button>
-                    <Button id="updateEventButton" onClick={() => handleOpen(event)}>Update</Button>
+                    <Button
+                        style={{
+                            backgroundColor: 'red'
+                        }}
+                        variant="contained" onClick={() => handleDeleteButton(event.id)}>Delete</Button>
+                    <Button  id="updateEventButton" onClick={() => handleOpen(event)}>Update</Button>
                 </div>
             </div>
         )
