@@ -5,8 +5,11 @@
     margin: 150px auto 0 auto;
     color: white;
     border-radius: 10px;
+<<<<<<< HEAD
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+=======
+>>>>>>> f2f43bcfb6e22ccbfd20c6c1c43b994aa06646e9
 }
 
 .login-header {
@@ -25,6 +28,7 @@
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .login-button button {
     width: 100%;
     padding: 10px;
@@ -156,3 +160,16 @@
     width: 100px;
     height: 30px;
   }
+=======
+.login-button {
+
+}
+
+.login-button button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+}
+>>>>>>> f2f43bcfb6e22ccbfd20c6c1c43b994aa06646e9

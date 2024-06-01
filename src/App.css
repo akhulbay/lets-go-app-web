@@ -11,6 +11,10 @@
 
 .body {
     flex-grow: 1;
+<<<<<<< HEAD
+=======
+    padding: 20px;
+>>>>>>> f2f43bcfb6e22ccbfd20c6c1c43b994aa06646e9
     margin: 0 auto;
 
 }
