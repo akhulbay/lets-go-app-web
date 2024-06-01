@@ -1,0 +1,33 @@
+.sidebar {
+    min-width: 200px;
+    height: 100vh;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: start;
+}
+.sidebar-item{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar-item h2 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
