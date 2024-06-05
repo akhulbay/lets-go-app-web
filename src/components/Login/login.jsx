@@ -50,17 +50,9 @@ function LoginPage({setIsAuth}) {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-<<<<<<< HEAD
-                    <div class="center">
-                        <button class="btn">
-                            <span>LOGIN</span>
-                        </button>
-                    </div>
-=======
                 <div className="login-button">
                     <button type="submit">Login</button>
                 </div>
->>>>>>> f2f43bcfb6e22ccbfd20c6c1c43b994aa06646e9
             </form>
         </div>
     );
