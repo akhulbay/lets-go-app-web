@@ -61,7 +61,7 @@ function Users() {
 
         await UserService.update(user, userId);
 
-        fetchUsersData();
+        await fetchUsersData();
     }
 
     async function handleUnblockButton(e, userId) {
@@ -73,7 +73,7 @@ function Users() {
 
         await UserService.update(user, userId);
 
-        fetchUsersData();
+        await fetchUsersData();
     }
 
     async function handleUpdateUser() {
@@ -85,7 +85,7 @@ function Users() {
 
         await UserService.update(user, userToUpdate.id);
 
-        fetchUsersData();
+        await fetchUsersData();
     }
 
     let userTableData = users.map((user) => {

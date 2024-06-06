@@ -59,7 +59,7 @@ class UserService {
             }
         }
 
-        axios.post(API_USERS_URL, user, config)
+        await axios.post(API_USERS_URL, user, config)
     }
 
     async update(user, userId) {

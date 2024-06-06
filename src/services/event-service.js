@@ -61,7 +61,7 @@ class EventService {
 
         let url = `${API_EVENTS_URL}/${eventId}`;
 
-        axios.delete(url, config);
+        await axios.delete(url, config);
     }
 
     async update(eventToUpdate, eventId) {
@@ -79,7 +79,7 @@ class EventService {
 
         let url = `${API_EVENTS_URL}/${eventId}`;
 
-        axios.put(url, formData, config);
+        await axios.put(url, formData, config);
     }
 
 }

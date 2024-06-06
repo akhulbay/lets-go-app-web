@@ -28,7 +28,7 @@ function LoginPage({setIsAuth}) {
     return (
         <div className="login-container">
             <div className="login-header">
-                <img src="path_to_logo" alt="Logo" className="login-logo"/>
+                <img src="/logo.jpg" alt="Logo" className="login-logo"/>
                 <h2>LOG IN</h2>
             </div>
             <form onSubmit={handleLogin} className="login-form">

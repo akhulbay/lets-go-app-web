@@ -30,7 +30,7 @@ function Events() {
     async function handleDeleteButton(eventId) {
         await EventService.delete(eventId);
 
-        fetchEventsData();
+        await fetchEventsData();
     }
 
     function handleOpen(event) {
